@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .navbar{
+        width: 100%;
+        background-color:#6B4650;
+        
+        padding: 15px 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar .navbar-logo h1{
+        font-size: 35px;
+        color:#A8B89A ;
+        
+    }
+     .navbar ul{
+        list-style: none; gap: 25px;
+        display: flex;
+
+     }
+     .navbar ul li {
+        position: relative;
+     }
+     .navbar ul li a { text-decoration: none;
+     font-size: 19px;color:#FFF4E6;
+     transition: 0.3s ease;}
+     .navbar ul li a ::before{
+        content: '';
+         position:absolute;
+         width: 0px;
+         background-color:#B85C70;
+          height:2px;
+          left:0;
+          bottom: -5px;
+          transition:0.3s ease;
+     }
+     .navbar ul li :hover{color:#B85C70;
+
+     }
+     .navbar ul li a:hover::before{ 
+        width: 100%; 
+    }
+    .navbar-serch{
+        align-items: center;display: flex;transition:0.3sec ease ;}
+
+
+    .navbar-serch input{
+        padding:7px 15px;
+        border-radius: 25px;
+        border:none;
+        outline:none ;font-size: 17px;
+        margin-right: 10px;
+        width :150px;
+        background-color:#FFF9F5;
+        transition:0.3sec ease ;}
+        .navbar-serch input:focus{
+            width: 200px; background-color:#FFF9F5;
+        }
+        .navbar-serch button{font-size: 15px; padding: 13px 15px; background-color:#B85C70; color:#3D3436; 
+        border: none; border-radius: 25px; cursor:pointer; transition: o.3sec ease;}
+        .navbar-serch button:hover{
+            background-color:#F5F5F5 ;
+        }
+        .hero-section{
+            background-image: url(https://t3.ftcdn.net/jpg/07/05/84/56/360_F_705845685_e1GJvNw3usEWEkxokUGTnWpX42Yvkh10.jpg);
+      width: 100%; background-position: center;height: 100vh;
+      background-size: cover;
+    background-color:#FFF9F5 ;   
+    }
+    section{padding: 32px 9%;}
+     .home{ display:flex;
+    align-items: center;
+min-height:100vh; 
+background:url(https://t3.ftcdn.net/jpg/07/05/84/56/360_F_705845685_e1GJvNw3usEWEkxokUGTnWpX42Yvkh10.jpg) ; background-size: cover; background-position: center;}
+     .home .content{max-width: 800px;}
+     .home .content h3{
+        font-size:93px;
+        color:#5A3E32;
+     }
+     .home .content span{
+        font-size: 30px;
+        color:#B85C70;
+        padding: 16px 0; line-height: 1.5;
+     }
+     .home .content p{ font-size:16px ; color: #6B5A50;}
+.btn{
+    display: inline-block;
+    margin:1rem;
+    border-radius: 80px;
+    background-color: #B85C70;
+    color: #3D3436;text-decoration: none; padding: 14.4px  54px;
+    cursor:pointer; font-size: 20px;
+}
+.btn:hover{
+    background-color:#F5F5F5;
+}
+.about{
+    background-color:#FFF4E6;font-size: 20px; 
+padding: 15px 8px;}
+
+.heading h2{color:#5A3E32;
+font-size: 46px; text-align: center;
+margin-top: 25px;}
+.container{ justify-content: space-between;align-items:center;display:flex;
+width: 90%;margin: 65px auto;font-size:17px;}
+.about-content{flex:1;width: 600px;margin: 0px 25px;} 
+.about-content h2{
+    font-size: 40px; margin-bottom: 20px;color:#A85C68;}
+.about-content p{font-size: 17px;margin-bottom: 5px;color:#60424A;
+}
+.about-image{flex: 1;width:600px;margin: auto;}
+img{width: 100%; height: 600px; border-radius: 5px;border:#D2B9A5;}
+.services {
+    background-color:#E8D8C3 ; 
+    padding: 50px 30px;
+    text-align: center;
+font-size: 20px;}
+
+
+.services h2 {
+    color: #5A3E32;
+    font-size: 37px;
+    margin-bottom: 0;
+}
+
+.service-intro {
+    color: #6F5A50;
+    max-width: 600px;
+    margin: 10px auto 35px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-box {
+    background-color: #F5EBDD;
+    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.service-box h3 {font-size: large;
+    color: #A85C68;
+}
+
+.service-box p {
+    color: #6F5A50;
+    line-height: 1.6;
+}.order {
+    background-color:#FFF3E6 ;
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.order h2 {
+    color: #5A3E32;
+}
+
+.order p {
+    color: #6F5A50;
+}
+
+form {
+    width: 400px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+label {
+    color: #5A3E32;
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #D2B9A5;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+
+    button {
+    background-color: #A65D6A;
+    color:#5A3E32;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 80px;
+}
+button:hover {
+    background-color:#F5F5F5;
+    color:#5A3E32;
+    cursor: pointer;
+} 
+.footer {
+    background-color:#6B4650 ;
+    color:#8A9A5B;
+    text-align: center;
+    padding: 40px 20px;font-size: 20px;
+}
+.footer p{color:#F5F5F5}
+.footer h2 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color:#FFF4E6;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.footer-links a:hover {
+    color:#B85C70 ;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+
+
+
+</style>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+           <big> <h1>𝑩𝑳𝑶𝑶𝑴 & 𝑷𝑬𝑻𝑨𝑳𝑺</h1></big>
+        </div>
+        <UL>
+            <li><a href="#home"> Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#order">Order</a></li>
+        </UL>
+        <div class="navbar-serch">
+            <input type="text" placeholder="serch......">
+            <button>search</button>
+        </div>
+
+    </nav>
+    <section class="home" id="home">
+        <div class="content"> <h3>Fresh Flowers</h3>
+        <span> natural & beautiful flowers</span>
+    <p> flowers, thoughtfully arranged to brighten your moments and make every occasion special</p> 
+<a href="#" class="btn">shop now</a>
+</div>
+    </section>
+
+</div>
+</div>
+</section>
+<section class="about" id="about">
+    <div class="heading">
+        <h2>About us</h2>
+    </div>
+    <div class=" container">
+        <div class="about-content">
+            <h2>Why choose us?</h2>
+            <p>At Bloom & Petals, we believe flowers are more than just beautiful gifts they help express feelings, celebrate special occasions, and create lasting memories. We carefully select fresh blooms and create each arrangement with attention to detail, creativity, and care, so every bouquet feels special and unique. Whether you are celebrating a birthday, sending a thoughtful gift, or simply brightening someone day, we are here to make every moment bloom beautifully.
+We choose fresh, beautiful flowers for every arrangement.
+Our bouquets are thoughtfully designed with care and creativity.
+We make every special moment bloom a little brighter.
+<p>At Bloom & Petals, we believe every flower has the power to make a moment feel special. We carefully select fresh blooms and create each arrangement with attention to detail, creativity, and care. Whether you are celebrating a special occasion or simply want to brighten someone's day, we are here to make every bouquet beautiful and memorable.
+</p><p>We bring fresh blooms and beautiful designs together to create something special.
+Every bouquet is made with care, attention, and a touch of creativity.
+Our flowers are here to make your moments feel even more memorable</p>
+
+<button class="btn">Read more</button>
+        </div>
+        <div class="about-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZnJJVcBZ4EJDnAZDz1dRRl5mvdmsX9R4AqMitpltbLq0bKrLXdCZWCmAr&s=10">
+</div>  
+  </div>
+</section> 
+<section class="services" id="service">
+
+    <h2>Our Services</h2>
+
+    <p class="service-intro">
+        We offer beautiful floral services made for every special moment.
+        From fresh flower delivery to custom bouquets and elegant event decorations.
+    </p>
+
+    <div class="service-container">
+
+        <div class="service-box">
+            <h3>Flower Delivery</h3>
+            <p>
+                Fresh and beautiful flowers delivered right to your doorstep.
+                We make every delivery a moment worth remembering.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h3>Custom Bouquets</h3>
+            <p>
+                Create a bouquet as unique as your special moment.
+                Choose your favorite flowers, colors, and style.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h3>Event Decoration</h3>
+            <p>
+                Transform your special occasions with elegant floral decorations
+                that make every moment bloom.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <section class="order" id="order">
+
+    <h2>Place Your Order</h2>
+
+    <p>Let us create something beautiful for you.</p>
+
+    <form>
+
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Flower / Bouquet</label>
+        <input type="text" placeholder="What would you like?">
+
+        <label>Message</label>
+        <textarea placeholder="Tell us about your order"></textarea>
+
+        <button type="submit">Place Order</button>
+
+    </form>
+
+</section>
+<footer class="footer">
+
+    <h2>𝑩𝑳𝑶𝑶𝑴 & 𝑷𝑬𝑻𝑨𝑳𝑺</h2>
+
+    <p>
+        Bringing beauty and freshness to every special moment.
+    </p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Services</a>
+        <a href="#order">Order</a>
+    </div>
+
+    
+
+
+</footer>
+</body>
+</html>
